@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer Appointment Form</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          style="width: 100px; height: 50px"
+          src="./agromod-logo.jpg"
+          alt=""
+        />
+        <a href="" class="header__logo"></a>
+      </div>
+      <nav class="nav" id="nav-menu">
+        <ion-icon name="close-outline" class="header__close"></ion-icon>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../Government schemes/index.html" class="nav__link"
+              >Government Policies</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="../fir se naya cart/index.html" class="nav__link"
+              >Vendor Connect</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="http://127.0.0.1:5000" class="nav__link"
+              >Price Prediction</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="http://127.0.0.1:8080" class="nav__link"
+              >Disease detection</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="http://127.0.0.1:5002/" class="nav__link"
+              >Yield Analysis</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="../Appointment Form/index.html" class="nav__link"
+              >Expert Advice</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="../Contact Us edit/index.html" class="nav__link"
+              >Contact Us</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="../login/login/frontend/index.html" class="nav__link"
+              >Login/Register</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <ion-icon
+        name="menu-outline"
+        class="header__toggle"
+        id="toggle-menu"
+      ></ion-icon>
+    </header>
+
+    <!-- Translator  -->
+    <div class="translator">
+      <div id="google_translate_element"></div>
+    </div>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    <!-- translator end -->
+    <form
+      class="appointment-form"
+      id="appointment-form"
+      onsubmit="redirectToGoogleCalendar(event)"
+    >
+      <h2>Book an Appointment</h2>
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="crop">Crop Type:</label>
+        <select id="crop" name="crop" required>
+          <option value="" disabled selected>Select Crop</option>
+          <option value="Wheat">Wheat</option>
+          <option value="Corn">Corn</option>
+          <option value="Maize">Maize</option>
+          <option value="Rice">Rice</option>
+          <option value="Potato">Potato</option>
+          <option value="Tomato">Tomato</option>
+          <option value="Cotton">Cotton</option>
+          <option value="Pea">Pea</option>
+          <option value="Carrot">Carrot</option>
+          <option value="Coffee">Coffee</option>
+        </select>
+      </div>
+      <!-- <div class="form-group">
+            <label for="disease">Disease Type:</label>
+            <select id="disease" name="disease" required>
+                <option value="" disabled selected>Select Disease</option>
+                <option value="Healthy">Healthy</option>
+                <option value="Powdery Mildew">Powdery Mildew</option>
+                <option value="Rust">Rust</option>
+            </select>
+        </div> -->
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          placeholder="Describe the issue or reason for appointment..."
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Book Appointment</button>
+    </form>
+
+    <div class="thank-you-message" id="thank-you-message">
+      Thank you! You are being redirected to Google Calendar...
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,296 @@
+/* General Reset and Typography */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #0a3055;
+}
+
+/* Header Styling */
+.header {
+  background: url("background-image.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 51, 102, 0.6);
+  z-index: 1;
+}
+
+.header h1,
+.header p {
+  position: relative;
+  z-index: 2;
+}
+
+.header p {
+  font-size: 1.25rem;
+}
+
+/* Overview Section */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5faff;
+}
+
+.overview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url("image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.overview-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 30px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.overview-section h2 {
+  font-size: 2em;
+  color: #003366;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.overview-section p {
+  font-size: 1.2em;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.overview-section p strong {
+  color: #000;
+}
+
+/* Layout and Styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.sidebar,
+.related-links,
+.main-content {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar,
+.related-links {
+  flex: 1;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.sidebar h2,
+.related-links h2 {
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.sidebar ul,
+.related-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li,
+.related-links li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar li.active a {
+  color: blue;
+  font-weight: bold;
+}
+
+.main-content h1 {
+  font-size: 1.75rem;
+  color: #f89406;
+  margin-bottom: 20px;
+}
+
+.scheme h2 {
+  font-size: 1.25rem;
+  color: #0a3055;
+}
+
+.scheme p,
+.scheme ul {
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+
+.scheme ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.scheme ul li {
+  padding-left: 20px;
+  position: relative;
+}
+
+.scheme ul li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #f89406;
+  font-size: 1.2rem;
+}
+
+/* Link Color and Hover Effect */
+
+/* General Link Styling */
+a {
+  color: #007bff; /* Default link color */
+  text-decoration: none; /* Remove underline for links */
+}
+
+a:hover {
+  color: #0056b3; /* Darker shade for hover effect */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Specific to Sidebar and Related Links */
+.sidebar ul li a,
+.related-links ul li a {
+  color: #007bff; /* Link color in sidebar and related links */
+}
+
+.sidebar ul li a:hover,
+.related-links ul li a:hover {
+  color: blue; /* Hover color */
+  font-weight: bold; /* Bold on hover */
+}
+
+/* Active Link in Sidebar */
+.sidebar li.active a {
+  color: blue; /* Active link color */
+  font-weight: bold; /* Bold text for active link */
+}
+
+.translator {
+  position: fixed;
+  top: 50%; /* Move to center vertically */
+  right: 20px; /* Move to right edge */
+  transform: translateY(-50%); /* Adjust vertical position */
+  z-index: 1000;
+}
+#google_translate_element {
+  font-size: 12px; /* Font size */
+  width: 40px; /* Minimized width */
+  height: 40px; /* Minimized height */
+  padding: 5px; /* Minimized padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #ff0000;
+  transition: all 0.5s ease-in-out; /* Add transition effect */
+  overflow: hidden; /* Hide excess content */
+  text-align: center; /* Center the text */
+}
+#google_translate_element:before {
+  content: "\f1ab"; /* Google Translate icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+}
+#google_translate_element:hover {
+  font-size: 16px; /* Expanded font size */
+  width: 200px; /* Expanded width */
+  height: 50px; /* Expanded height */
+  padding: 10px; /* Expanded padding */
+  border-radius: 10px; /* Make it a rectangle with rounded corners */
+  background-color: #f9f9f9; /* Normal background color when expanded */
+}
+#google_translate_element:hover:before {
+  display: none; /* Hide the icon when expanded */
+}
+
+/* Translator Code */
+
+.translator {
+  position: fixed;
+  top: 50%; /* Move to center vertically */
+  right: 20px; /* Move to right edge */
+  transform: translateY(-50%); /* Adjust vertical position */
+  z-index: 1000;
+}
+#google_translate_element {
+  font-size: 12px; /* Font size */
+  width: 40px; /* Minimized width */
+  height: 40px; /* Minimized height */
+  padding: 5px; /* Minimized padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #ff0000;
+  transition: all 0.5s ease-in-out; /* Add transition effect */
+  overflow: hidden; /* Hide excess content */
+  text-align: center; /* Center the text */
+}
+#google_translate_element:before {
+  content: "\f1ab"; /* Google Translate icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+}
+#google_translate_element:hover {
+  font-size: 16px; /* Expanded font size */
+  width: 200px; /* Expanded width */
+  height: 50px; /* Expanded height */
+  padding: 10px; /* Expanded padding */
+  border-radius: 10px; /* Make it a rectangle with rounded corners */
+  background-color: #f9f9f9; /* Normal background color when expanded */
+}
+#google_translate_element:hover:before {
+  display: none; /* Hide the icon when expanded */
+}

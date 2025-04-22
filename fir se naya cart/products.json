@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":" Nano Urea ",
+        "price": 225,
+        "image": "image/1.png"
+    },
+    {
+        "id": 2,
+        "name":" Liquid Sagarika",
+        "price": 70,
+        "image": "image/2.png"
+    },
+    {
+        "id": 3,
+        "name":" D A P",
+        "price": 1350,
+        "image": "image/3.png"
+    },
+    {
+        "id": 4,
+        "name":" Urea",
+        "price": 330,
+        "image": "image/4.png"
+    },
+    {
+        "id": 5,
+        "name":" Kokoro",
+        "price": 320,
+        "image": "image/5.png"
+    },
+    {
+        "id": 6,
+        "name":" Atari",
+        "price": 185,
+        "image": "image/6.png"
+    },
+    {
+        "id": 7,
+        "name":" Zakiyama Plus",
+        "price": 240,
+        "image": "image/7.png"
+    },
+    {
+        "id": 8,
+        "name":" Mono Potassium Phosphate ",
+        "price": 260,
+        "image": "image/8.png"
+    }
+
+]

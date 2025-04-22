@@ -1,0 +1,235 @@
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #000; */
+  background: linear-gradient(to left, #72c099, #2e8359, #1b231f);
+  box-sizing: border-box;
+  color: #fdfdfc;
+}
+
+.appointment-form {
+  max-width: 440px;
+  margin: auto;
+  margin-top: 5%;
+  padding: 20px;
+
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical; /* Allows the textarea to be resized vertically but not horizontally */
+}
+
+button {
+  background-color: #fdfdfc;
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ed925d;
+}
+
+.thank-you-message {
+  display: none;
+  color: green;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+/* header code */
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/* stop here */
+header {
+  display: flex;
+  background-color: #149279;
+  justify-content: space-around;
+  padding: 0.4rem 0;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 10vh;
+  width: 90vw;
+  margin-top: 1%;
+  margin-left: 4.5%;
+  position: relative;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.header__logo {
+  color: #eee;
+  font-weight: 600;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  margin: 0 8px;
+}
+.nav__link {
+  padding: 10px;
+  color: #eeee;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.nav__link:hover {
+  background-color: #00adb5;
+}
+.header__toggle,
+.header__close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 28px;
+  }
+  .logo a {
+    font-size: 0.9rem;
+  }
+  .logo img {
+    width: 30px;
+  }
+  .header__toggle {
+    display: inline;
+    color: #eeee;
+    font-size: 24px;
+  }
+  .header__close {
+    position: absolute;
+    right: 24px;
+    display: block;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .header__close:hover {
+    background-color: #00adb5;
+  }
+  .nav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: #149279;
+    color: #eeee;
+    width: 90vw;
+    height: 100vh;
+    opacity: 0; /* Hidden by default */
+    z-index: -1; /* Positioned behind the navbar */
+    transition: opacity 0.5s ease, z-index 0s 0.5s; /* Delay z-index change */
+    border-radius: 0 0 0 50%;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .nav__item {
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+  .show {
+    opacity: 1; /* Make visible when .show class is added */
+    z-index: 100; /* Bring it above the navbar */
+    transition: opacity 0.5s ease, z-index 0s 0s; /* Remove z-index delay */
+  }
+}
+
+.thank-you-message {
+  color: #000;
+}
+
+/* header code */
+
+/* translator code */
+
+.translator {
+  position: fixed;
+  top: 50%; /* Move to center vertically */
+  right: 20px; /* Move to right edge */
+  transform: translateY(-50%); /* Adjust vertical position */
+  z-index: 1000;
+}
+#google_translate_element {
+  font-size: 12px; /* Font size */
+  width: 40px; /* Minimized width */
+  height: 40px; /* Minimized height */
+  padding: 5px; /* Minimized padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #ff0000;
+  transition: all 0.5s ease-in-out; /* Add transition effect */
+  overflow: hidden; /* Hide excess content */
+  text-align: center; /* Center the text */
+}
+#google_translate_element:before {
+  content: "\f1ab"; /* Google Translate icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+}
+#google_translate_element:hover {
+  font-size: 16px; /* Expanded font size */
+  width: 200px; /* Expanded width */
+  height: 50px; /* Expanded height */
+  padding: 10px; /* Expanded padding */
+  border-radius: 10px; /* Make it a rectangle with rounded corners */
+  background-color: #f9f9f9; /* Normal background color when expanded */
+}
+#google_translate_element:hover:before {
+  display: none; /* Hide the icon when expanded */
+}
